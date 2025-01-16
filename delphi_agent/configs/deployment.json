@@ -1,7 +1,7 @@
 [
     {
         "name": "deployment_1",
-        "module": {"name": "delphi_rebuild"},
+        "module": {"name": "delphi_agent"},
         "node": {"ip": "localhost"},
         "config": {
             "config_name": "config_1",

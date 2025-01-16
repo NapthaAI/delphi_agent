@@ -7,9 +7,9 @@ from naptha_sdk.memory import Memory
 from naptha_sdk.schemas import AgentRunInput, EnvironmentRunInput, MemoryRunInput
 from naptha_sdk.user import sign_consumer_id
 from naptha_sdk.utils import get_logger
-from delphi_rebuild.prompts.market_agent_prompts import PERCEPTION_PROMPT, ACTION_PROMPT, REFLECTION_PROMPT
-from delphi_rebuild.schemas import InputSchema
-from delphi_rebuild.utils import load_prompt
+from delphi_agent.prompts.market_agent_prompts import PERCEPTION_PROMPT, ACTION_PROMPT, REFLECTION_PROMPT
+from delphi_agent.schemas import InputSchema
+from delphi_agent.utils import load_prompt
 
 load_dotenv()
 
@@ -150,7 +150,7 @@ if __name__ == "__main__":
 
     naptha = Naptha()
 
-    deployment = asyncio.run(setup_module_deployment("agent", "delphi_rebuild/configs/deployment.json", node_url = os.getenv("NODE_URL")))
+    deployment = asyncio.run(setup_module_deployment("agent", "delphi_agent/configs/deployment.json", node_url = os.getenv("NODE_URL")))
 
     input_params = {
         "prompt": "hi",
