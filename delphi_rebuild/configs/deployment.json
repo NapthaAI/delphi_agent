@@ -1,15 +1,22 @@
 [
     {
         "name": "deployment_1",
-        "module": {"name": "module_template"},
+        "module": {"name": "delphi_rebuild"},
         "node": {"ip": "localhost"},
         "config": {
             "config_name": "config_1",
             "llm_config": {"config_name": "model_2"},
+            "persona_module" : {"name": "tars_discord"},
             "system_prompt": {
                 "role": "You are a helpful AI assistant.",
                 "persona": ""
             }
-        }
+        },
+        "environment_deployments": [
+            {"name": "chat_environment_deployment_1"}
+        ],
+        "memory_deployments": [
+            {"name": "cognitive_memory_deployment"}
+        ]
     }
 ]
