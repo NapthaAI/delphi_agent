@@ -43,10 +43,11 @@
                 "answer_col": "text"
             },
             "schema": {
-                "agent_id": {"type": "INTEGER", "primary_key": true},
+                "memory_id": {"type": "INTEGER", "primary_key": true},
                 "task_query": {"type": "TEXT"},
-                "steps": {"type": "TEXT"},
+                "cognitive_steps": {"type": "jsonb"},
                 "total_reward": {"type": "INTEGER"},
+                "strategy_update": {"type": "jsonb"},
                 "created_at": {"type": "TEXT"},
                 "metadata": {"type": "jsonb"}
             },

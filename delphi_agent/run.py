@@ -46,7 +46,8 @@ class DelphiAgent:
     async def agent_loop(self, module_run):
         perception = self.perceive(module_run)
         action = self.act(perception)
-        reflect()
+        reflection = self.reflect()
+        return {"success"}
 
     async def perceive(self, module_run):
         logger.info(f"Getting global state...")
