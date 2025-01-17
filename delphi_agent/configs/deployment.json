@@ -16,7 +16,8 @@
             {"name": "chat_environment_deployment_1"}
         ],
         "memory_deployments": [
-            {"name": "cognitive_memory_deployment"}
+            {"name": "cognitive_memory_deployment"},
+            {"name": "episodic_memory_deployment"}
         ]
     }
 ]

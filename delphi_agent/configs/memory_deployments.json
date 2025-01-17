@@ -30,5 +30,38 @@
                 "k": 5
             }
         }
+    },
+    {
+        "name": "episodic_memory_deployment",
+        "module": {"name": "episodic_memory"},
+        "node": {"ip": "localhost"},
+        "config": {
+            "storage_type": "db",
+            "path": "episodic_memory",
+            "options": {
+                "query_col": "title",
+                "answer_col": "text"
+            },
+            "schema": {
+                "agent_id": {"type": "INTEGER", "primary_key": true},
+                "task_query": {"type": "TEXT"},
+                "steps": {"type": "TEXT"},
+                "total_reward": {"type": "INTEGER"},
+                "created_at": {"type": "TEXT"},
+                "metadata": {"type": "jsonb"}
+            },
+            "embedder": {
+                "model": "text-embedding-3-small",
+                "chunk_size": 1000,
+                "chunk_overlap": 200,
+                "separators": ["\n\n", "\n", ". ", " ", ""],
+                "embedding_dim": 1536
+            },
+            "retriever": {
+                "type": "vector",
+                "field": "embedding",
+                "k": 5
+            }
+        }
     }
 ]
